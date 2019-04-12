@@ -1,0 +1,4 @@
+#!/bin/sh
+
+perl -wple "s/\f|\e\[\d+(?>(;\d+)*)m//g" ${1:-'typescript'}
+
