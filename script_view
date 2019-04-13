@@ -1,7 +1,6 @@
 #!/bin/sh
 
 cat ${1:-'typescript'} \
-	| perl -wple "s/\e\[H\e\[2J/\f\r/g" \
 	| perl -wple "s/\e\[\d+(?>(;\d+)*)m//g" \
 	| perl -wple "s/\e\]0;.*\a//g" \
 	| less
